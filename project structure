@@ -1,0 +1,13 @@
+movie_recommender/
+│
+├── static/
+│   └── style.css
+│
+├── templates/
+│   ├── index.html
+│   └── recommend.html
+│
+├── movies.csv
+├── app.py
+├── requirements.txt
+└── README.md
