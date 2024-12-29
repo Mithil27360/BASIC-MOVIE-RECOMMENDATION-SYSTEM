@@ -1,0 +1,31 @@
+# templates/recommend.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Top {{ selected_genre }} Movies</h1>
+        <div class="movies-list">
+            {% for movie in movies %}
+            <div class="movie-card">
+                <h2>{{ movie.Title }}</h2>
+                <div class="movie-info">
+                    <p class="duration"><strong>Duration:</strong> {{ movie.Duration }}</p>
+                    <p class="rating"><strong>Rating:</strong> {{ movie.Rate }}/10</p>
+                    <p class="genre"><strong>Genre:</strong> {{ movie.Genre }}</p>
+                </div>
+                <div class="movie-details">
+                    <p class="description"><strong>Description:</strong> {{ movie.Description }}</p>
+                    <p class="cast"><strong>Cast:</strong> {{ movie.Cast }}</p>
+                    <p class="info"><strong>Additional Info:</strong> {{ movie.Info }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('index') }}" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>
