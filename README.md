@@ -5,10 +5,10 @@ This is a simple Flask-based web application that recommends movies based on sel
 ## Project Structure
 movie_recommender/
 │
-├── static/
+├── static
 │   └── style.css
 │
-├── templates/
+├── templates
 │   ├── index.html
 │   └── recommend.html
 │
@@ -19,33 +19,14 @@ movie_recommender/
 
 
 
-## Features
+Features
 - Select a genre and get top-rated movie recommendations.
 - Displays movie details like title, rating, genre, description, and more.
 
-## Prerequisites
+Prerequisites
 - Python 3.8 or higher
-- `pip` (Python package manager)
+-  pip  flask pandas gunicorn flask-wtf
 
-## Setup Instructions
-1. Clone this repository:
-    ```bash
-    git clone https://github.com/yourusername/movie_recommender.git
-    cd movie_recommender
-    ```
-2. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3. Run the application:
-    ```bash
-    python app.py
-    ```
-4. Open your browser and go to `http://127.0.0.1:5000`.
 
-## Dependencies
-- Flask
-- pandas
 
-## License
 This project is licensed under the MIT License - see the LICENSE file for details.
